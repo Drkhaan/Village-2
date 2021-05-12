@@ -8,7 +8,7 @@ public class Patroll : MonoBehaviour
     public float Speed;
     private float waitTime;
     public float StartWaitTime;
-    public GameObject conversation;
+    //public GameObject conversation;
 
     public Transform[] moveSpots;
     private int randomSpot;
@@ -24,13 +24,13 @@ public class Patroll : MonoBehaviour
     void Update()
     {
 
-        if(conversation.activeSelf)
+       /* if(conversation.activeSelf)
         {
             Speed =0f;
         } else 
         {
             Speed =2f;
-        }
+        }*/
 
 
         transform.position = Vector2.MoveTowards(transform.position, moveSpots[randomSpot].position, Speed * Time.deltaTime);

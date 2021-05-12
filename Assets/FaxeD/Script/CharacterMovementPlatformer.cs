@@ -7,7 +7,7 @@ public class CharacterMovementPlatformer : MonoBehaviour
     public Rigidbody2D rb2d;
     public float speed;
     public GameObject MapMenu;
-    public GameObject conversation;
+    //public GameObject conversation;
 
    
    void Start()
@@ -17,13 +17,13 @@ public class CharacterMovementPlatformer : MonoBehaviour
    
     void Update()
     {
-        if(conversation.activeSelf)
+        /*if(conversation.activeSelf)
         {
             speed =0f;
         } else 
         {
             speed =5f;
-        }
+        }*/
        
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
