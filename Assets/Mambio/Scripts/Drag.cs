@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -44,4 +44,5 @@ public class Drag : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEnd
     {
         throw new System.NotImplementedException();
     }
+    
 }
