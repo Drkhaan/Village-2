@@ -34,9 +34,17 @@ public class Move : MonoBehaviour
 
         if(DansZoneDialog==true&&Input.GetKey(KeyCode.E))
         {
+            this.GetComponentInChildren<Rigidbody2D>().velocity=new Vector2(0,0);
             DialogueCanvas.SetActive(true);
             canMove=false;
             Entraindeparler=true;
+        }
+
+        if(canMove&&Input.GetKeyDown(KeyCode.LeftArrow)||canMove&&Input.GetKeyDown(KeyCode.Z)){
+            this.GetComponentInChildren<SpriteRenderer>().flipX=true;
+        }
+        if(canMove&&Input.GetKeyDown(KeyCode.RightArrow)||canMove&&Input.GetKeyDown(KeyCode.D)){
+            this.GetComponentInChildren<SpriteRenderer>().flipX=false;
         }
        
     }

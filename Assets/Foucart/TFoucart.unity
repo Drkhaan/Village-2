@@ -409,8 +409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1b478b7adb65da4d84676e52859cb1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Follow: 0
-  Play: {fileID: 453112113}
 --- !u!1 &100757947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,7 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cf12d1e726109445867933b9fdaf8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 1000
+  movementSpeed: 600
   DialogueCanvas: {fileID: 298546451}
   canMove: 0
   DansZoneDialog: 0
