@@ -7608,8 +7608,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 181.329, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 494, y: -168}
-  m_SizeDelta: {x: 313.74353, y: 417.61786}
+  m_AnchoredPosition: {x: 490, y: -182}
+  m_SizeDelta: {x: 520.8777, y: 604.8889}
   m_Pivot: {x: 0.5000001, y: 0.5}
 --- !u!114 &937421643
 MonoBehaviour:
@@ -7750,8 +7750,8 @@ MonoBehaviour:
   - {fileID: 2107464147}
   QueteDonne: 0
   textDialog: {fileID: 752191019}
-  SpritePerso: {fileID: 0}
-  monSprite: {fileID: 21300000, guid: 0d34dd8e15183da4cbb5048d68c67f46, type: 3}
+  SpritePerso: {fileID: 937421643}
+  monSprite: {fileID: 21300000, guid: 2d2d12bcb5c700c438d85c8a94b0ccbb, type: 3}
   move: {fileID: 504900593}
   TexteActuel: 0
   quest: {fileID: 409164207}
@@ -8261,7 +8261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1234992213
 RectTransform:
   m_ObjectHideFlags: 0

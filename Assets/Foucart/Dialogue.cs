@@ -18,7 +18,7 @@ public class Dialogue : MonoBehaviour
 
     [Header("Phrases Choix2 du pnj")]
     public List<string> PhrasesChoix2=new List<string>();
-    public bool Choix2;
+    private bool Choix2;
     [Header("")]
 
     [Header("Phrases Choix3 du pnj")]
