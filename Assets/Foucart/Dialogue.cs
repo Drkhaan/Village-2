@@ -170,6 +170,8 @@ public class Dialogue : MonoBehaviour
         }
         if(move.Entraindeparler==true&&Input.GetKey(KeyCode.Return)&&TexteActuel>=PhrasesQueteTermine.Count-1&&TexteActuel!=100&&QueteTermine&&JesuisDansLaZone)
         {
+            Debug.Log("Peut être");
+            quest.QueteTermine();
              Debug.Log("Ferme");
             FermeDialogue();
         }
