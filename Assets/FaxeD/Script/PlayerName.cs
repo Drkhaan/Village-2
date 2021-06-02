@@ -28,4 +28,17 @@ public class PlayerName : MonoBehaviour
         saveName = inputText.text;
         PlayerPrefs.SetString("name", saveName);
     }
+
+    public void SavePlayer2()
+    {
+        save.SavePlayer2(this);
+    }
+
+    public void LoadPlayer2()
+    {
+       PlayerData data = save.LoadPlayer2();
+
+       string nomJoueur = saveName;
+        
+    }
 }
