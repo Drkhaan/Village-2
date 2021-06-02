@@ -8,6 +8,7 @@ public class CharacterMovementPlatformer : MonoBehaviour
     public float speed;
     public GameObject MapMenu;
     //public GameObject conversation;
+    public GameObject prenom;
 
    
    void Start()
@@ -24,6 +25,14 @@ public class CharacterMovementPlatformer : MonoBehaviour
         {
             speed =5f;
         }*/
+
+         if(prenom.activeSelf)
+        {
+            speed =0f;
+        } else 
+        {
+            speed =5f;
+        }
        
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
@@ -39,5 +48,22 @@ public class CharacterMovementPlatformer : MonoBehaviour
         {
             MapMenu.SetActive(true);
         }
+    }
+
+    public void SavePlayer()
+    {
+        save.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+       PlayerData data = save.LoadPlayer();
+
+       Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+
     }
 }
