@@ -80,6 +80,8 @@ public class Dialogue : MonoBehaviour
     private bool SupprimeDialogUneFois;
     private bool QueteDonneUne;
     public GameObject AnimQueteObtenue;
+
+    public float numSon;
     // Start is called before the first frame update
     void Start()
     {
@@ -470,6 +472,8 @@ public class Dialogue : MonoBehaviour
         {
             quest.NumeroQuete=NumeroQuete;
             JesuisDansLaZone=true;
+
+            move.numeroPNJ = numSon;
         }
         if(other.tag=="Player"&&TexteActuel!=100)
         {
