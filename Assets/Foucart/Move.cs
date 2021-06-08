@@ -40,11 +40,149 @@ public class Move : MonoBehaviour
             Entraindeparler=true;
         }
 
-        if(canMove&&Input.GetKeyDown(KeyCode.LeftArrow)||canMove&&Input.GetKeyDown(KeyCode.Z)){
+        /*if(canMove&&Input.GetKeyDown(KeyCode.LeftArrow)||canMove&&Input.GetKeyDown(KeyCode.Z)){
             this.GetComponentInChildren<SpriteRenderer>().flipX=true;
         }
         if(canMove&&Input.GetKeyDown(KeyCode.RightArrow)||canMove&&Input.GetKeyDown(KeyCode.D)){
             this.GetComponentInChildren<SpriteRenderer>().flipX=false;
+        }*/
+
+        if(canMove&&Input.GetKeyDown(KeyCode.Q)||canMove&&Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+            //this.GetComponent<SpriteRenderer>().flipX=false;
+            this.GetComponent<Animator>().SetBool("CoteGauche", true);
+            this.GetComponent<Animator>().SetBool("Descend", false);
+        }
+        if(canMove&&Input.GetKeyDown(KeyCode.D)||canMove&&Input.GetKeyDown(KeyCode.RightArrow))
+        {
+
+           this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+
+            this.GetComponent<Animator>().SetBool("CoteDroit", true);
+            this.GetComponent<Animator>().SetBool("Descend", false);
+        }
+        if(canMove&&Input.GetKeyDown(KeyCode.Z)||canMove&&Input.GetKeyDown(KeyCode.UpArrow))
+        {
+
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+
+            this.GetComponent<Animator>().SetBool("Dos", true);
+            this.GetComponent<Animator>().SetBool("CoteGauche", false);
+            this.GetComponent<Animator>().SetBool("Descend", false);
+        }
+        if(canMove&&Input.GetKeyDown(KeyCode.S)||canMove&&Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("Descend", true);
+           this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+        }
+        if(Input.GetKeyUp(KeyCode.Q)||Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            this.GetComponent<Animator>().SetBool("CoteGauche", false);
+           this.GetComponent<Animator>().SetBool("NormalGauche", true);
+            this.GetComponent<Animator>().SetBool("Descend", false);
+        }
+        if(Input.GetKeyUp(KeyCode.D)||Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            this.GetComponent<Animator>().SetBool("NormalDroite", true);
+            this.GetComponent<Animator>().SetBool("CoteDroit", false);
+           // this.GetComponent<Animator>().SetBool("Descend", false);
+            //this.GetComponent<SpriteRenderer>().flipX=false;
+        }
+        if(Input.GetKeyUp(KeyCode.S)||Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            this.GetComponent<Animator>().SetBool("NormalBas", true);
+            this.GetComponent<Animator>().SetBool("Descend", false);
+        }
+        if(Input.GetKeyUp(KeyCode.Z)||Input.GetKeyUp(KeyCode.UpArrow))
+        {
+            //this.GetComponent<SpriteRenderer>().flipX=false;
+            this.GetComponent<Animator>().SetBool("Dos", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", true);
+        }
+
+        if(canMove&&Input.GetKeyDown(KeyCode.S)&&Input.GetKeyDown(KeyCode.Q)||canMove&&Input.GetKeyDown(KeyCode.DownArrow)&&Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            //this.GetComponent<SpriteRenderer>().flipX=false;
+            this.GetComponent<Animator>().SetBool("Descend", true);
+            this.GetComponent<Animator>().SetBool("CoteGauche", false);
+            this.GetComponent<Animator>().SetBool("CoteDroit", false);
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+        }
+        if(canMove&&Input.GetKeyDown(KeyCode.S)&&Input.GetKeyDown(KeyCode.D)||canMove&&Input.GetKeyDown(KeyCode.DownArrow)&&Input.GetKeyDown(KeyCode.RightArrow))
+        {
+           this.GetComponent<Animator>().SetBool("CoteGauche", false);
+            this.GetComponent<Animator>().SetBool("Descend", true);
+            this.GetComponent<Animator>().SetBool("CoteGauche", false);
+            this.GetComponent<Animator>().SetBool("CoteDroit", false);
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+        }
+
+        if(canMove&&Input.GetKeyDown(KeyCode.Z)&&Input.GetKeyDown(KeyCode.Q)||canMove&&Input.GetKeyDown(KeyCode.UpArrow)&&Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            //this.GetComponent<SpriteRenderer>().flipX=false;
+            this.GetComponent<Animator>().SetBool("Dos", true);
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+        }
+        if(canMove&&Input.GetKeyDown(KeyCode.Z)&&Input.GetKeyDown(KeyCode.D)||canMove&&Input.GetKeyDown(KeyCode.UpArrow)&&Input.GetKeyDown(KeyCode.RightArrow))
+        {
+           // this.GetComponent<SpriteRenderer>().flipX=false;
+            this.GetComponent<Animator>().SetBool("Dos", true);
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+        }
+        if(canMove&&Input.GetKeyDown(KeyCode.Z)&&Input.GetKeyUp(KeyCode.Q)||canMove&&Input.GetKeyDown(KeyCode.UpArrow)&&Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+           // this.GetComponent<SpriteRenderer>().flipX=false;
+            this.GetComponent<Animator>().SetBool("Dos", true);
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+        }
+        if(canMove&&Input.GetKeyDown(KeyCode.S)&&Input.GetKeyUp(KeyCode.Q)||canMove&&Input.GetKeyDown(KeyCode.DownArrow)&&Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+           // this.GetComponent<SpriteRenderer>().flipX=false;
+            this.GetComponent<Animator>().SetBool("Descend", true);
+            this.GetComponent<Animator>().SetBool("Dos", false);
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
+        }
+        if(canMove&&Input.GetKeyDown(KeyCode.S)&&Input.GetKeyUp(KeyCode.D)||canMove&&Input.GetKeyDown(KeyCode.DownArrow)&&Input.GetKeyUp(KeyCode.RightArrow))
+        {
+           // this.GetComponent<SpriteRenderer>().flipX=false;
+            this.GetComponent<Animator>().SetBool("Descend", true);
+            this.GetComponent<Animator>().SetBool("Dos", false);
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
+            this.GetComponent<Animator>().SetBool("NormalDroite", false);
+            this.GetComponent<Animator>().SetBool("NormalHaut", false);
+            this.GetComponent<Animator>().SetBool("NormalBas", false);
         }
        
     }
