@@ -23,18 +23,23 @@ public class ramassage : MonoBehaviour
         Pickup();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Equals("Girl"))
-        {
+        Debug.Log("1");
             pickUpText.gameObject.SetActive(true);
+        if (Input.GetKeyDown("e") && collision.tag == "Player")
+        {
             pickUpAllowed = true;
+
         }
+
+            
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Equals("Girl"))
+        if ( collision.tag == "Player")
         {
             pickUpText.gameObject.SetActive(false);
             pickUpAllowed = false;
@@ -43,6 +48,9 @@ public class ramassage : MonoBehaviour
 
     private void Pickup()
     {
+        
+
+        Debug.Log("3");
         Destroy(gameObject);
     }
 }
