@@ -21,7 +21,7 @@ public class Pickup : MonoBehaviour
                 if (inventory.isFull[i] == false)
                 {
                     inventory.isFull[i] = true;
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
+                    Instantiate(itemButton, inventory.slots[i].transform, true);
                     Destroy(gameObject);
                     break;
                 }
