@@ -14,9 +14,9 @@ public class Pickup_2_test : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (Input.GetKeyDown("e") && other.tag == "Player")
         {
             for (int i = 0; i < inventory.slots.Length; i++)
             {
