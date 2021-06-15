@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
-    private Inventory inventory;
+    private Inventaire inventory;
     public int i;
 
     private void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventaire>();
     }
 
     private void Update()
