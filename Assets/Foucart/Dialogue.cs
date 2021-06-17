@@ -134,7 +134,7 @@ public class Dialogue : MonoBehaviour
               FermeDialogue();
         }
 
-        Debug.Log(TexteActuel);
+//        Debug.Log(TexteActuel);
         if(move.Entraindeparler==true&&Input.GetKey(KeyCode.Return)&&TexteActuel<PhrasesdeBases.Count-1&&!UneFois&&TexteActuel!=100&&!QueteTermine&&!Choix1&&!Choix2&&!Choix3&&JesuisDansLaZone)
         {
             UneFois=true;
