@@ -15,6 +15,12 @@ public class Move : MonoBehaviour
     public List<AudioSource> sonsPNJ = new List<AudioSource>();
     public float numeroPNJ; 
 
+    //trucs rajoutés par moi et ossatte
+    public GameObject mapMenu;
+    public GameObject prenom;
+    //fin trucs
+
+
     void Awake()
     {
         canMove=true;
@@ -26,8 +32,38 @@ public class Move : MonoBehaviour
         rigidbody2D.gravityScale = 0.0f;
     }
 
+    
     void Update()
     {
+        //trucs rajoutés encore
+
+        if ( Input.GetKeyDown(KeyCode.Tab))
+        {
+            mapMenu.SetActive(true);
+        }
+       
+        
+        if ( prenom.activeSelf )
+        {
+            movementSpeed = 0;
+
+        } else 
+        {
+            movementSpeed = 350;
+        }
+
+        if ( mapMenu.activeSelf )
+        {
+            movementSpeed = 0;
+            
+        } else
+        {
+            movementSpeed = 350f;
+        }
+        
+        // fin des trucs rajoutés
+
+
         if(canMove)
         {
              Vector2 targetVelocity = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
