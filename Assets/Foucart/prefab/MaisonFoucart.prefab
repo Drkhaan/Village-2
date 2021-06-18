@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 9047047891185398223}
   - component: {fileID: 9047047891185398216}
   m_Layer: 0
-  m_Name: Maison
+  m_Name: MaisonFoucart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
