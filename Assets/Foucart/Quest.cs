@@ -11,6 +11,7 @@ public class Quest : MonoBehaviour
     public GameObject Singe;
     public Text EtatdelaQuete;
     public Text DescriptionQuete;
+    public AudioSource QueteObtenueSOn;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,9 +37,10 @@ public class Quest : MonoBehaviour
             Singe.SetActive(true);
         }
 
-        QueteSymbole.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
-        QueteSymbole.SetActive(false);
+        QueteObtenueSOn.Play();
+        QueteSymbole.GetComponent<Animator>().SetBool("Go", true);
+        yield return new WaitForSeconds(5.0f);
+        QueteSymbole.GetComponent<Animator>().SetBool("Go", false);
        
     }
     public void QueteTermine()

@@ -6,7 +6,7 @@ public class Move : MonoBehaviour
 {
         new Rigidbody2D rigidbody2D;
 
-    public float movementSpeed = 1000.0f;
+    public float movementSpeed ;
     public GameObject DialogueCanvas;
     public bool canMove;
     public bool DansZoneDialog;
@@ -49,7 +49,7 @@ public class Move : MonoBehaviour
 
         } else 
         {
-            movementSpeed = 350;
+            movementSpeed = 250;
         }
 
         if ( mapMenu.activeSelf )
@@ -58,7 +58,7 @@ public class Move : MonoBehaviour
             
         } else
         {
-            movementSpeed = 350f;
+            movementSpeed = 250f;
         }
         
         // fin des trucs rajoutés

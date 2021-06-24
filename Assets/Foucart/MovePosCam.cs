@@ -14,8 +14,8 @@ public class MovePosCam : MonoBehaviour
     void Start()
     {
         speed=5;
-        SizeMax=8f;
-        SizeNormal=5;
+        SizeMax=6.5f;
+        SizeNormal=4;
     }
 
     // Update is called once per frame
@@ -25,9 +25,10 @@ public class MovePosCam : MonoBehaviour
         {
             if(Cameraa.GetComponent<Camera>().orthographicSize<SizeMax)
             {
-                Cameraa.GetComponent<Camera>().orthographicSize+=1*Time.deltaTime;;
+                Cameraa.GetComponent<Camera>().orthographicSize+=1*Time.deltaTime;
+                Cameraa.transform.position = Vector3.MoveTowards(Cameraa.transform.position,Tran.position, speed * Time.deltaTime);
             }
-             Cameraa.transform.position = Vector3.MoveTowards(Cameraa.transform.position,Tran.position, speed * Time.deltaTime);
+             
         }
         if(MoveCam==false)
         {
