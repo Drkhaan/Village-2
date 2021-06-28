@@ -82,6 +82,8 @@ public class Dialogue : MonoBehaviour
     public GameObject AnimQueteObtenue;
 
     public float numSon;
+    public bool StopMoveParle;
+    public bool TermineQueteFinDialogueBase;
     // Start is called before the first frame update
     void Start()
     {
@@ -222,6 +224,11 @@ public class Dialogue : MonoBehaviour
     }
     public void FermeDialogue()
     {
+        if(TermineQueteFinDialogueBase)
+        {
+            quest.QueteTermine();
+        }
+
         if(QueteFinDialogue&&!QueteDonneUne)
         {
             QueteDonneUne=true;
@@ -268,6 +275,7 @@ public class Dialogue : MonoBehaviour
         if(RepeteEnBoucle==false&&QueteTermine&&JesuisDansLaZone)
         {
             TexteActuel=200;
+            Debug.Log("WTFFF");
             quest.QueteTermine();
         }
         move.canMove=true;
@@ -373,7 +381,6 @@ public class Dialogue : MonoBehaviour
     }
     public void Choix2Fonction()
     {
-
        /* if(QueteFinChoix2&&!QueteDonneUne)
         {
             QueteDonneUne=true;
@@ -457,8 +464,6 @@ public class Dialogue : MonoBehaviour
         Choix3=false;
         Choix2=false;
         Choix1=false;
-
-        Debug.Log("Problem");
          foreach (GameObject obj in lesChoix)
              {
                     obj.SetActive(false);
@@ -468,6 +473,11 @@ public class Dialogue : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        if(other.tag=="Player"&&StopMoveParle)
+        {
+            this.GetComponentInParent<Patroll>().PeutBouger=false;
+            this.GetComponentInParent<Rigidbody2D>().velocity=new Vector2(0,0);
+        }
         if(other.tag=="Player")
         {
             quest.NumeroQuete=NumeroQuete;
@@ -525,6 +535,10 @@ public class Dialogue : MonoBehaviour
         if(other.tag=="Player")
         {
             JesuisDansLaZone=false;
+        }
+        if(other.tag=="Player"&&StopMoveParle)
+        {
+            this.GetComponentInParent<Patroll>().PeutBouger=true;
         }
     }
 

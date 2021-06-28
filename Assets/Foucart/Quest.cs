@@ -8,9 +8,14 @@ public class Quest : MonoBehaviour
     public GameObject QueteSymbole;
     public float NumeroQuete;
     public GameObject Quete1;
-    public GameObject Singe;
+    public GameObject PnJForet;
+    public GameObject PnJDonneQuete1;
+    public GameObject LesPoules;
+    public GameObject Player;
     public Text EtatdelaQuete;
     public Text DescriptionQuete;
+    public GameObject FadeDisparait;
+    public AudioSource Transi;
     public AudioSource QueteObtenueSOn;
     // Start is called before the first frame update
     void Start()
@@ -33,8 +38,9 @@ public class Quest : MonoBehaviour
     {
         if(NumeroQuete==1)
         {
+            Debug.Log("Allez");
             Quete1.SetActive(true);
-            Singe.SetActive(true);
+            PnJForet.SetActive(true);
         }
 
         QueteObtenueSOn.Play();
@@ -49,6 +55,23 @@ public class Quest : MonoBehaviour
         {
             EtatdelaQuete.color=Color.green;
             EtatdelaQuete.text="terminé ";
+            LesPoules.SetActive(false);
+            PnJDonneQuete1.SetActive(false);
+            StartCoroutine(QueteTermineCorou());
         }
+    }
+
+    IEnumerator QueteTermineCorou()
+    {
+        if(NumeroQuete==1)
+        {
+            yield return new WaitForSeconds(1f);
+            FadeDisparait.SetActive(true);
+            Transi.Play();
+            yield return new WaitForSeconds(0.5f);
+            PnJForet.SetActive(false);
+            FadeDisparait.SetActive(false);
+        }
+       
     }
 }

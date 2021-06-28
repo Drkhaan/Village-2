@@ -151,8 +151,8 @@ public class Move : MonoBehaviour
         }
         if(canMove&&Input.GetKeyDown(KeyCode.S)||canMove&&Input.GetKeyDown(KeyCode.DownArrow))
         {
-            this.GetComponent<Animator>().SetBool("NormalGauche", false);
             this.GetComponent<Animator>().SetBool("Descend", true);
+            this.GetComponent<Animator>().SetBool("NormalGauche", false);
            this.GetComponent<Animator>().SetBool("NormalGauche", false);
             this.GetComponent<Animator>().SetBool("NormalDroite", false);
             this.GetComponent<Animator>().SetBool("NormalHaut", false);
@@ -183,7 +183,7 @@ public class Move : MonoBehaviour
             this.GetComponent<Animator>().SetBool("NormalHaut", true);
         }
 
-        if(canMove&&Input.GetKeyDown(KeyCode.S)&&Input.GetKeyDown(KeyCode.Q)||canMove&&Input.GetKeyDown(KeyCode.DownArrow)&&Input.GetKeyDown(KeyCode.LeftArrow))
+        /*if(canMove&&Input.GetKeyDown(KeyCode.S)&&Input.GetKeyDown(KeyCode.Q)||canMove&&Input.GetKeyDown(KeyCode.DownArrow)&&Input.GetKeyDown(KeyCode.LeftArrow))
         {
             //this.GetComponent<SpriteRenderer>().flipX=false;
             this.GetComponent<Animator>().SetBool("Descend", true);
@@ -252,7 +252,7 @@ public class Move : MonoBehaviour
             this.GetComponent<Animator>().SetBool("NormalDroite", false);
             this.GetComponent<Animator>().SetBool("NormalHaut", false);
             this.GetComponent<Animator>().SetBool("NormalBas", false);
-        }
+        }*/
        
     }
 

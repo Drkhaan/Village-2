@@ -11,15 +11,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Descend
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: CoteGauche
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Dos
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: CoteDroit
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4278755449542580022}
   m_Solo: 0
@@ -371,15 +362,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Descend
     m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: CoteGauche
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: Dos
-    m_EventTreshold: 0
-  - m_ConditionMode: 2
-    m_ConditionEvent: CoteDroit
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4278755449542580022}
   m_Solo: 0
@@ -666,49 +648,49 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: CoteGauche
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Dos
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: CoteDroit
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: NormalGauche
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: NormalDroite
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: NormalHaut
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: NormalBas
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -871,7 +853,7 @@ AnimatorStateMachine:
     m_Position: {x: 340, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4278755449542580022}
-    m_Position: {x: 500, y: 840, z: 0}
+    m_Position: {x: 430, y: 870, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6265595891041082009}
     m_Position: {x: 700, y: -180, z: 0}
