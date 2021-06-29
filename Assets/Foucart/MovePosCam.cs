@@ -14,7 +14,7 @@ public class MovePosCam : MonoBehaviour
     void Start()
     {
         speed=5;
-        SizeMax=6.5f;
+        SizeMax=7f;
         SizeNormal=4;
     }
 
@@ -36,7 +36,7 @@ public class MovePosCam : MonoBehaviour
             {
                 Cameraa.GetComponent<Camera>().orthographicSize-=3*Time.deltaTime;
                  Cameraa.GetComponent<CamFollow>().enabled=true;
-                 Cameraa.transform.position=new Vector3(Cameraa.transform.position.x,0,-10);
+                 Cameraa.transform.position=new Vector3(Cameraa.transform.position.x,0,-30);
             }
         }
     }

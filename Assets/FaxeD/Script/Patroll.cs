@@ -11,6 +11,7 @@ public class Patroll : MonoBehaviour
     public float PosX;
     public float PosY;
     public bool Bouftou;
+    public bool Poule;
     public bool MarcheY;
     public bool PeutBouger;
     //public GameObject conversation;
@@ -76,13 +77,22 @@ public class Patroll : MonoBehaviour
                     this.GetComponent<Animator>().SetBool("Marche", false);
                 }
                     waitTime -= Time.deltaTime;
-                    if(transform.position.x>PosX)
+                    if(transform.position.x>PosX&&Bouftou)
                     {
                         this.GetComponent<SpriteRenderer>().flipX=true;
                     }
-                    if(transform.position.x<PosX)
+                    if(transform.position.x<PosX&&Bouftou)
                     {
                         this.GetComponent<SpriteRenderer>().flipX=false;
+                    }
+
+                    if(transform.position.x>PosX&&Poule)
+                    {
+                        this.GetComponent<SpriteRenderer>().flipX=false;
+                    }
+                    if(transform.position.x<PosX&&Poule)
+                    {
+                        this.GetComponent<SpriteRenderer>().flipX=true;
                     }
                 }
         }
