@@ -11,6 +11,8 @@ public class EntreMaison : MonoBehaviour
     public GameObject Fade;
     public bool Entre;
     public AudioSource Trans;
+    public AudioSource MusicBatiment;
+    public AudioSource MusicDehors;
     //public Transform CameraPositionMaison;
     // Start is called before the first frame update
     void Start()
@@ -32,11 +34,15 @@ public class EntreMaison : MonoBehaviour
             Player.transform.position=EntreMaisonPos;
             if(Entre)
             {
+                MusicBatiment.Play();
+                MusicDehors.Stop();
                 CamDesactive.SetActive(false);
                 CamActive.SetActive(true);
             }   
             if(!Entre)
             {
+                 MusicBatiment.Stop();
+                MusicDehors.Play();
                 Debug.Log("Rat");
                 CamDesactive.SetActive(true);
                 CamActive.SetActive(false);

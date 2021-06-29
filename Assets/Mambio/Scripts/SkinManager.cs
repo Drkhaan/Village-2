@@ -35,7 +35,7 @@ public class SkinManager : MonoBehaviour
 
     public void PlayGame()
     {
-        PrefabUtility.SaveAsPrefabAsset(playerSkin, "Assets/selectedskin.prefab");
+        //PrefabUtility.SaveAsPrefabAsset(playerSkin, "Assets/selectedskin.prefab");
         SceneManager.LoadScene("Mambio");
     }
 }
