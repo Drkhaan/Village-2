@@ -13,9 +13,9 @@ public class BoutDeMap : MonoBehaviour
     }
 
     // Update is called once per frame
-   void OnTriggerStay2D(Collider2D collision)
+   void OnTriggerEnter2D(Collider2D collision)
     {
-       if (Input.GetKeyDown("e") && collision.tag == "Player")
+       if ( collision.tag == "Player")
         {
             Debug.Log("Test");
             Destroy(this.gameObject);

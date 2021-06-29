@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Everyone/test/Everyone.unity
     guid: dca9976b5017cc64d82697ebdf5943e8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Mambio/Menu_Character.unity
     guid: 41c314cd2ce3de346b285f8c847a268c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Mambio/Mambio.unity
     guid: 12877c62afc5b0f44a64b1e1b4ef67ed
   m_configObjects: {}
