@@ -58,7 +58,7 @@ public class Patroll : MonoBehaviour
 
         if(moveSpots.Length>0&&Vector2.Distance(transform.position, moveSpots[randomSpot].position) <0.2f)
         {
-            Debug.Log("Rat");
+            //Debug.Log("ta grosse mère la pute");
             if(waitTime <=0)
             {
                 PosX=this.GetComponent<Transform>().position.x;
